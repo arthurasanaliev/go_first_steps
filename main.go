@@ -21,6 +21,7 @@ func renderTemplate(w http.ResponseWriter, tmpl string) {
 	err := parsedTemplate.Execute(w, nil)
 	if err != nil {
 		fmt.Println("Error with rendering template:", err)
+		return
 	}
 }
 
