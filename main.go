@@ -27,7 +27,7 @@ func renderTemplate(w http.ResponseWriter, tmpl string) {
 
 func main() {
 	http.HandleFunc("/", Home)
-	http.HandleFunc("/", About)
+	http.HandleFunc("/about", About)
 
 	_ = http.ListenAndServe(portNumber, nil)
 }
