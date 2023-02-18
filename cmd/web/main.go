@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"myapp/pkg/handlers"
 	"net/http"
 )
@@ -11,5 +12,6 @@ func main() {
 	http.HandleFunc("/", handlers.Home)
 	http.HandleFunc("/about", handlers.About)
 
+	fmt.Println("Starting app on port", portNumber)
 	_ = http.ListenAndServe(portNumber, nil)
 }
